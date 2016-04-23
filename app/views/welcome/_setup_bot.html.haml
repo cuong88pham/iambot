@@ -2,15 +2,15 @@
   .col-md-8.col-sm-8.col-xs-8
     %h3= @page_title.to_s
     .row
-      .col-md-12.col-sm-12.col-xs-12
-        .col-md-6.col-sm-6.col-xs-6
+      .col-md-12
+        .col-md-6
           %p
             %i.fa.fa-plus
             %b When user start a conversation
 
-      .col-md-12.col-sm-12.col-xs-12
-        .col-md-6.col-sm-6.col-xs-6.pull-right
-          %p.text-right
+      .col-md-12#message-1
+        .col-md-6
+          %p
             %b Bot's reply
           .tile-stats
             %textarea.textarea#welcome_message.form-control{onkeyup: "textAreaAdjust(this)", disabled: true}

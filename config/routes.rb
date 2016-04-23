@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   get '/products', to: 'home#products'
 
   get '/notifications', to: 'notifications#index'
+  get '/notifications/new/step1', to: 'notifications#step1'
+  get '/notifications/new/step2', to: 'notifications#step2'
 
   get '/users', to: 'users#index'
 

@@ -1,0 +1,20 @@
+.row
+  %h1{:style=>"margin-left:10px"}
+    New campaign
+  .col-md-12.col-sm-12.col-xs-12
+    .x_content
+      %div
+        %form.form-horizontal.form-label-left.input_mask
+          .form-group
+            %label.control-label.col-md-3.col-sm-3.col-xs-12 Campaign name
+            .col-md-9.col-sm-9.col-xs-12
+              %input.form-control{:placeholder => "campaign name", :type => "text", :value => "Acquiring new use"}
+          .form-group
+            %label.control-label.col-md-3.col-sm-3.col-xs-12 Message
+            .col-md-9.col-sm-9.col-xs-12
+              .tile-stats
+                %textarea.textarea#welcome_message.form-control{onkeyup: "textAreaAdjust(this)", disabled: true}
+                  Chào bạn, mình là K- đầu bếp trực tuyến của KitFE. Cảm ơn bạn đã quan tâm đến dịch vụ của Kitfe, mình gởi bạn coupon "Giam30k" để giảm 30,000 VND cho lần sử dụng đầu tiên. Chúc bạn ăn ngon miệng nhé ^^
+      %br
+      = link_to 'Next', '/notifications/new/step2', class: 'btn btn-primary', style: 'width:120px; margin-left:10px;'
+    

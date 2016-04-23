@@ -3,4 +3,10 @@ class NotificationsController < ActionController::Base
 
   def index
   end
+
+  def step1
+  end
+
+  def step2
+  end
 end
