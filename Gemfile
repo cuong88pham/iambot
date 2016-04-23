@@ -16,7 +16,7 @@ gem 'coffee-rails', '~> 4.1.0'
 
 gem 'devise'
 gem 'omniauth'
-gem 'omniauth-shopify-oauth2'
+gem 'shopify_app'
 gem 'omniauth-facebook'
 
 gem 'pry-rails'

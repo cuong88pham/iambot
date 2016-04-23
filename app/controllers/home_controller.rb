@@ -1,6 +1,11 @@
-class HomeController < ApplicationController
+class HomeController < ShopifyApp::AuthenticatedController
+  layout 'application'
   def index
-    @page_title = "Conversation"
+    @products = ShopifyAPI::Product.find(:all, :params => {:limit => 10})
+    if @products.present? 
+      redirect_to step2_path
+    end     
+    render 'index'
   end
 
   def login
@@ -9,5 +14,9 @@ class HomeController < ApplicationController
 
   def wellcome
     render layout: 'login'
+  end
+
+  def step2
+    render 'text'      
   end
 end
