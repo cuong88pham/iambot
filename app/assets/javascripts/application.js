@@ -38,3 +38,8 @@
 //= require custom
 //= require wizard/jquery.smartWizard
 //= require step3
+//= require bootstrap-switch.min
+
+$(document).ready(function(){
+  $("[name='my-checkbox']").bootstrapSwitch();
+});
