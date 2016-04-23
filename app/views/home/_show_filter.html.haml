@@ -1,0 +1,8 @@
+.col-md-12.col-sm-12.col-xs-12
+  %p.text-right
+    %b Bot's reply
+  .tile-stats
+    %textarea.textarea#welcome_message.form-control{onkeyup: "textAreaAdjust(this)", disabled: true}
+      = trigger[:data][:message]
+= trigger
+= render 'show_trigger', trigger: trigger[:data]

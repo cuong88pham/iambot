@@ -1,0 +1,14 @@
+- if button[:message].present?
+  .col-md-12.col-sm-12.col-xs-12.pull-right
+    %p.text-right
+      %b Bot's reply
+    .tile-stats
+      %textarea.textarea.form-control{onkeyup: "textAreaAdjust(this)", disabled: true}
+        = button[:message]
+- else
+  .col-md-6.col-sm-6.col-xs-6.pull-right
+    %p.text-right
+      %b Bot's reply
+    .tile-stats
+      %textarea.textarea.form-control{onkeyup: "textAreaAdjust(this)", disabled: true}
+        = button[:data][:message]
