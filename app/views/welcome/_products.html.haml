@@ -1,7 +1,22 @@
+- i = 0
 - @foods.each do |food|
-  .col-md-3.col-sm-6.col-xs-12
-    .pricing
-      .title
-        %h2= food.title
-      .x_content
-        %div Thịt có mùi thơm, miếng thịt không khô ăn vừa có vị béo vừa có cảm giác rất ngon cơm.
+  - i = i + 1
+  - if i <= 4
+    .col-md-3
+      .thumbnail
+        %div
+          =  image_tag(food.images.first.src, class: "img-responsive")      
+          .mask
+            %p= food.title
+            .tools.tools-bottom
+              %a{:href => "#"}
+                %i.fa.fa-link
+              %a{:href => "#"}
+                %i.fa.fa-pencil
+              %a{:href => "#"}
+                %i.fa.fa-times
+      .caption
+        %p= food.body_html.html_safe
+        %p= food.body_html.html_safe
+        %p 
+          %strong= food.variants.first.price          

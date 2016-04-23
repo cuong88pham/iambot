@@ -4,14 +4,9 @@
     .row
       .col-md-12.col-sm-12.col-xs-12
         .col-md-6.col-sm-6.col-xs-6
-          %p.alert.alert-info
+          %p
+            %i.fa.fa-plus
             %b When user start a conversation
-      - @template_food = @template[:template_food]
-      = render 'bot_welcome_area', template: @template_food[:wellcome_area]
-
-<<<<<<< HEAD
-  .col-md-3.col-sm-3.col-xs-3.facebook_chat_box
-=======
 
       .col-md-12.col-sm-12.col-xs-12
         .col-md-6.col-sm-6.col-xs-6.pull-right
@@ -32,6 +27,7 @@
         .col-md-6.col-sm-6.col-xs-6
           %p.alert.alert-info
             %b When user select "Kitfe là gì"
+            
       .col-md-12.col-sm-12.col-xs-12
         .col-md-6.col-sm-6.col-xs-6.pull-right
           %p.text-right
@@ -70,7 +66,6 @@
             %b When user select "Xem thực đơn"
             
   .col-md-4.col-sm-4.col-xs-4.facebook_chat_box
->>>>>>> c47a68820875ca484a0ecb5548ed5c9a96c771ba
     .facebook_title
       %p{style:'margin-bottom: 0px;'}
         %b Kitfe - Kitchen For Everyone
@@ -85,5 +80,4 @@
     %br/
     %br/
     %ul
-    - @products.each do |product|
-      %li= link_to product.title, "https://#{@shop_session.url}/admin/products/#{product.id}", target: "_top"
+

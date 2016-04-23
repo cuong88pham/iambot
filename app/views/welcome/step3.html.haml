@@ -55,7 +55,7 @@
                   %form.form-horizontal.form-label-left
                     #wrapper
                       %section.login_content
-                        .form-group
+                        .form-group                      
                           %center
                             %h2 Login with shopify
                             %div
@@ -71,41 +71,21 @@
                               = link_to 'Connect with shopify', '/welcome/step2', class: 'btn btn-success'
 
                 #step-2
-                  .row
-                    .col-md-12
-                      .x_content
-                        %br/
-                        %form#demo-form2.form-horizontal.form-label-left{"data-parsley-validate" => ""}
-                          .form-group
-                            %label.control-label.col-md-3.col-sm-3.col-xs-12{:for => "middle-name"} Shop name
-                            .col-md-6.col-sm-6.col-xs-12
-                              %input#middle-name.form-control.col-md-7.col-xs-12{:name => "middle-name", :type => "text", :value => "KitFE"}
-                          .form-group
-                            %label.control-label.col-md-3.col-sm-3.col-xs-12 Category
-                            .col-md-6.col-sm-6.col-xs-12
-                              %select.form-control{:placeholder => "Category", :required => "", :type => "text", :value => "Food & Beverages"}
-                                %option{value: 'food'} Food & Beverages
-                                %option{value: 'food'} Fashion
-
-                  .row
-                    .col-md-12.col-sm-12.col-xs-12
-                      .x_panel{:style => "height:600px;"}
-                        .x_title
-                          %h2 Product
-                        .x_content
-                          .row
-                            .col-md-12
-                              = render "products", foods: @foods
-
-                        %p.text-center
-                          = link_to 'Next', '/welcome/step3', class: 'btn btn-success', style: "width:200px"
-                        }
-              / End SmartWizard Content              
+                  %h2.StepTitle Step 2 Content
+                  %p
+                    do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  %p
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                    in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                #step-3
+                  = render "setup_bot"
+              / End SmartWizard Content
 
 :javascript
   $(document).ready(function() {
     // Smart Wizard
-    $('#wizard').smartWizard({selected: 1});
+    $('#wizard').smartWizard({selected: 2});
   });
 
   $(document).ready(function() {
@@ -114,4 +94,4 @@
       transitionEffect: 'slide'
     });
 
-  });
+  });                

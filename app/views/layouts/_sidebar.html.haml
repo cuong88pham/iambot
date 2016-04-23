@@ -20,24 +20,25 @@
         %h3 General
         %ul.nav.side-menu
           %li
-            %a
+            = link_to '/messages' do
               %i.fa.fa-home
               Messages
               %span.fa.fa-chevron-down
           %li
-            %a
+            = link_to '/notifications' do
               %i.fa.fa-home
-              Notification
+              Notifications
               %span.fa.fa-chevron-down
           %li
-            %a
+            = link_to '/users' do
               %i.fa.fa-home
               User
               %span.fa.fa-chevron-down
+
           %li
-            %a
+            = link_to '/settings' do
               %i.fa.fa-home
-              Setting
+              Settings
               %span.fa.fa-chevron-down
           
     / /sidebar menu
