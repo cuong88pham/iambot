@@ -19,5 +19,6 @@
 //= require icheck/icheck.min
 //= require pace/pace.min
 //= require api
+//= require bot_setup
 //= require custom
 

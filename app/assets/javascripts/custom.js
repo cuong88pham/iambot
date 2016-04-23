@@ -26,7 +26,10 @@ $(document).ready(function(){
 
     $("#welcome_message").on('blur', function(){
         $("#welcome_message").prop("disabled", true);
-    })
+    });
+    $.each($('.textarea'), function(i){
+        document.getElementsByClassName("textarea")[i].style.height = document.getElementsByClassName("textarea")[i].scrollHeight + 25 + 'px';
+    });
 })
 // Sidebar
 $(function () {
