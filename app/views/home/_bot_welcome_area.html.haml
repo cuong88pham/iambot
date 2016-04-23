@@ -1,24 +1,25 @@
 .col-md-12.col-sm-12.col-xs-12
-  .col-md-6.col-sm-6.col-xs-6.pull-right
-    %p.text-right
+  .col-md-6.col-sm-6.col-xs-6.pull-left
+    %p
       %b Bot's reply
     .tile-stats
       %textarea.textarea#welcome_message.form-control{onkeyup: "textAreaAdjust(this)", disabled: true}
         = template[:message]
-  - template[:buttons].each do |key, button|
-    .col-md-12.col-sm-12.col-xs-12
-      .col-md-3.col-sm-3.col-xs-3.pull-right
-        %button.btn.btn-block.btn-primary.btn-action
-          = button[:title]
-      .col-md-8.col-sm-8.col-xs-8
-        %p
-          %strong= "When user select #{button[:title]}"
+- template[:buttons].each do |key, button|
+  .col-md-12.col-sm-12.col-xs-12
+    .col-md-3.col-sm-3.col-xs-3.pull-left
+      %button.btn.btn-block.btn-primary.btn-action{data: {key: "el_#{key}"}}
+        = button[:title]
 
-    .col-md-12.col-sm-12.col-xs-12
+  .col-md-12.col-sm-12.col-xs-12{class: "el_#{key}"}
+    %p.padding-left-10
+      %strong= "When user select #{button[:title]}"
 
-      - if button[:data].present? && button[:type] == 'show_message'
-        = render 'show_message', button: button
+  .col-md-12.col-sm-12.col-xs-12{class: "el_#{key}"}
 
-      - if button[:data][:trigger].present?
-        - trigger = @template_food[button[:data][:trigger].to_sym]
-        = render 'show_trigger', trigger: trigger
+    - if button[:data].present? && button[:type] == 'show_message'
+      = render 'show_message', button: button
+
+    - if button[:data][:trigger].present?
+      - trigger = @template_food[button[:data][:trigger].to_sym]
+      = render 'show_trigger', trigger: trigger

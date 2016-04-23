@@ -5386,3 +5386,12 @@ textarea.form-control:disabled {
     cursor: pointer;
 }
 
+.padding-left-10{
+  padding-left: 10px;
+}
+.el_first, .el_second, .el_thirt,
+.el_first_view_menu, .el_second_view_menu,
+.el_first_show_location, .el_first_show_filter,
+.el_second_show_filter, .el_thirt_show_filter{
+  display: none;
+}

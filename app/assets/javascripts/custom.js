@@ -19,18 +19,23 @@ function textAreaAdjust(o) {
     o.style.height = (5+o.scrollHeight)+"px";
 }
 $(document).ready(function(){
-    BOTAPI.create_message();
+
     $(".tile-stats").click(function(){
         $("#welcome_message").prop("disabled", false);
         $("#welcome_message").focus();
     });
 
-    $("#welcome_message").on('blur', function(){
-        $("#welcome_message").prop("disabled", true);
-    });
     $.each($('.textarea'), function(i){
         document.getElementsByClassName("textarea")[i].style.height = document.getElementsByClassName("textarea")[i].scrollHeight + 5 + 'px';
     });
+    $('.btn-action').click(function(){
+        var klass = $(this).data('key');
+        $('.'+klass).slideToggle();
+        $.each($('.textarea'), function(i){
+        document.getElementsByClassName("textarea")[i].style.height = document.getElementsByClassName("textarea")[i].scrollHeight + 5 + 'px';
+    });
+    });
+
 })
 
 // Sidebar
