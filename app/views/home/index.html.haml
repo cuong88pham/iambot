@@ -14,7 +14,8 @@
           %p.text-right
             %b Bot's reply
           .tile-stats
-            %p Chào bạn, Mình là đầu bếp ảo KitFe. Mình xin phép được tư vấn cho bạn về menu và cách đặt hàng hôm nay. Chọn “Xem thực đơn” để được hỗ trợ bởi mình và “Tư vấn viên” trong trường hợp bạn cần gặp đội ngũ chăm sóc khách hàng.
+            %textarea#welcome_message.form-control{onkeyup: "textAreaAdjust(this)", disabled: true}
+              Chào bạn, Mình là đầu bếp ảo KitFe. Mình xin phép được tư vấn cho bạn về menu và cách đặt hàng hôm nay. Chọn “Xem thực đơn” để được hỗ trợ bởi mình và “Tư vấn viên” trong trường hợp bạn cần gặp đội ngũ chăm sóc khách hàng.
 
           .col-md-6.col-sm-6.col-xs-6.pull-right
             %button.btn.btn-block.btn-primary Kitfe là gì
