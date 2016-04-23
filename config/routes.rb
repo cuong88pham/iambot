@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root 'home#index'
   get '/conversation', to: 'home#index'
 
+  get '/products', to: 'home#products'
 
   get '/welcome', to: 'welcome#index'
   get '/welcome/step1', to: 'welcome#step1'
@@ -10,6 +11,10 @@ Rails.application.routes.draw do
   get '/welcome/step3', to: 'welcome#step3'
 
 
+  # Facebook messenger callback
+  get '/webhook', to: 'messenger#verify'
+  post '/webhook', to: 'messenger#reciveMessage'
+  
   mount ShopifyApp::Engine, at: '/'
 
   get '/auth/shopify/callback', to: 'home#callback'

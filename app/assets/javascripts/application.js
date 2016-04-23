@@ -37,3 +37,4 @@
 //= require bot_setup
 //= require custom
 //= require wizard/jquery.smartWizard
+//= require step3
