@@ -13,4 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require_tree .
+//= require bootstrap.min
+//= require progressbar/bootstrap-progressbar.min
+//= require icheck/icheck.min
+//= require pace/pace.min
+//= require custom
