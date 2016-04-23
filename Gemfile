@@ -21,6 +21,11 @@ gem 'omniauth'
 gem 'shopify_app'
 gem 'omniauth-facebook'
 
+gem 'redis'
+gem 'redis-namespace'
+gem 'redis-rails'
+gem 'redis-rack-cache'
+
 gem 'pry-rails'
 
 # Use jquery as the JavaScript library

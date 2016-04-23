@@ -16,7 +16,7 @@ var URL = window.location,
 
 function textAreaAdjust(o) {
     o.style.height = "1px";
-    o.style.height = (25+o.scrollHeight)+"px";
+    o.style.height = (5+o.scrollHeight)+"px";
 }
 $(document).ready(function(){
     BOTAPI.create_message();
@@ -29,7 +29,7 @@ $(document).ready(function(){
         $("#welcome_message").prop("disabled", true);
     });
     $.each($('.textarea'), function(i){
-        document.getElementsByClassName("textarea")[i].style.height = document.getElementsByClassName("textarea")[i].scrollHeight + 25 + 'px';
+        document.getElementsByClassName("textarea")[i].style.height = document.getElementsByClassName("textarea")[i].scrollHeight + 5 + 'px';
     });
 })
 

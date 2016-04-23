@@ -5350,7 +5350,7 @@ ul.notifications {
   position: relative;
 }
 .facebook_chat_box{
-  position: absolute;
+  position: fixed;
   bottom: 0px;
   border: 1px solid #B8B0BA;
   right: 0px;
