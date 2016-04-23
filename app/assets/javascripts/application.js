@@ -35,3 +35,4 @@
 //= require skycons/skycons.min
 //= require api
 //= require custom
+//= require wizard/jquery.smartWizard

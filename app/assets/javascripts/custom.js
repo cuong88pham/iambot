@@ -28,12 +28,14 @@ $(document).ready(function(){
         $("#welcome_message").prop("disabled", true);
     })
 })
+
 // Sidebar
 $(function () {
 
 
-    $("#welcome_message").css('height', document.getElementById("welcome_message").scrollHeight + 25 + 'px');
-    console.log(document.getElementById("welcome_message").scrollHeight);
+    // $("#welcome_message").css('height', document.getElementById("welcome_message").scrollHeight + 25 + 'px');
+    // console.log(document.getElementById("welcome_message").scrollHeight);
+    
     // TODO: This is some kind of easy fix, maybe we can improve this
     var setContentHeight = function () {
         // reset height
