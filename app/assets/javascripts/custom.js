@@ -22,6 +22,7 @@ $(document).ready(function(){
     BOTAPI.create_message();
     $(".tile-stats").click(function(){
         $("#welcome_message").prop("disabled", false);
+        $("#welcome_message").focus();
     });
 
     $("#welcome_message").on('blur', function(){
@@ -38,7 +39,7 @@ $(function () {
 
     // $("#welcome_message").css('height', document.getElementById("welcome_message").scrollHeight + 25 + 'px');
     // console.log(document.getElementById("welcome_message").scrollHeight);
-    
+
     // TODO: This is some kind of easy fix, maybe we can improve this
     var setContentHeight = function () {
         // reset height

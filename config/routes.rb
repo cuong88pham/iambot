@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
 
-  root 'home#login'  
+  root 'home#login'
   get 'wellcome', to: 'home#wellcome'
   get 'step2', to: 'home#step2'
+  get '/conversation', to: 'home#index'
 
   mount ShopifyApp::Engine, at: '/'
 

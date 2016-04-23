@@ -10,12 +10,16 @@
 
       .col-md-12.col-sm-12.col-xs-12
         .col-md-6.col-sm-6.col-xs-6.pull-right
-
           %p.text-right
             %b Bot's reply
           .tile-stats
             %textarea.textarea#welcome_message.form-control{onkeyup: "textAreaAdjust(this)", disabled: true}
               Chào bạn, Mình là đầu bếp ảo KitFe. Mình xin phép được tư vấn cho bạn về menu và cách đặt hàng hôm nay. Chọn “Xem thực đơn” để được hỗ trợ bởi mình và “Tư vấn viên” trong trường hợp bạn cần gặp đội ngũ chăm sóc khách hàng.
+        .bot_welcome_area
+
+        .col-md-12.col-sm-12.col-xs-12
+          .col-md-3.col-sm-3.col-xs-3.pull-right
+            %button.btn.btn-block.btn-default.add_button_welcome Add button
       .col-md-12.col-sm-12.col-xs-12
         .col-md-3.col-sm-3.col-xs-3.pull-right
           %button.btn.btn-block.btn-primary.btn-action Kitfe là gì
@@ -59,7 +63,6 @@
         .col-md-6.col-sm-6.col-xs-6
           %p.alert.alert-info
             %b When user select "Xem thực đơn"
-
   .col-md-4.col-sm-4.col-xs-4.facebook_chat_box
     .facebook_title
       %p{style:'margin-bottom: 0px;'}
