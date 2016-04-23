@@ -1,6 +1,7 @@
 class HomeController < ShopifyApp::AuthenticatedController
   layout 'application'
   def index
+<<<<<<< HEAD
     @products = ShopifyAPI::Product.find(:all, :params => {:limit => 10})
 
     render 'index'
@@ -17,4 +18,7 @@ class HomeController < ShopifyApp::AuthenticatedController
   def step2
     render 'text'
   end
+=======
+  end  
+>>>>>>> 0ef63667c06562c2bf4bce1a555626701e5abb5e
 end
