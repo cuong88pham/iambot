@@ -1,0 +1,20 @@
+%hr
+.row
+  .step3-content
+    .col-md-11
+      .step3-customer
+        .col-md-6.pull-left
+          %p
+            %b Customer ask:                          
+          %input.form-control{:placeholder => "Question ?", :required => "", :type => "text"}/
+      .step3-a-message
+        %br
+        %br
+        %br
+        .col-md-6
+          %p
+            %b Bot's reply
+            %input.form-control{:placeholder => "Answer", :required => "", :type => "text"}/            
+    .col-md-1
+      .btn.btn-round.btn-danger.step3-definition-remove
+        %i.fa.fa-close

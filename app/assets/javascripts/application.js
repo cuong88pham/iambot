@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require bootstrap-sprockets
 //= require nprogress
 //= require gauge/gauge.min
@@ -38,3 +37,17 @@
 //= require custom
 //= require wizard/jquery.smartWizard
 //= require step3
+//= require bootstrap-switch.min
+
+$(document).ready(function(){
+  $("[name='my-checkbox']").bootstrapSwitch();
+  $(".btn-notification-filter").click(function() {    
+    console.log("click");
+    $(".table-notification-users").show();
+  });  
+
+  $(".step3-definition-remove").click(function() {    
+    console.log("click");
+    $(this).parent().parent().parent().remove();
+  });
+});

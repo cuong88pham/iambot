@@ -5,6 +5,10 @@ Rails.application.routes.draw do
 
   get '/products', to: 'home#products'
 
+  get '/notifications', to: 'notifications#index'
+  get '/notifications/new/step1', to: 'notifications#step1'
+  get '/notifications/new/step2', to: 'notifications#step2'
+
   get '/users', to: 'users#index'
 
   get '/welcome', to: 'welcome#index'
@@ -12,6 +16,7 @@ Rails.application.routes.draw do
   get '/welcome/step2', to: 'welcome#step2'
   get '/welcome/step3', to: 'welcome#step3'
 
+  get '/ajax/add_definition', to: 'ajax#add_definition'
 
   # Facebook messenger callback
   get '/webhook', to: 'messenger#verify'
