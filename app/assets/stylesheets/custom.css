@@ -5353,9 +5353,39 @@ ul.notifications {
   position: fixed;
   bottom: 0px;
   border: 1px solid #B8B0BA;
-  right: 0px;
+  right: 10px;
   padding: 0px;
   background: #EDEEF1;
+  width: 260px;
+
+
+}
+
+.facebook_chat_box .box {
+  padding: 5px 0px;
+  min-height: 300px;
+  font-size: 12px;
+}
+.facebook_chat_box .box .bot {
+
+}
+hr {
+  border-color: #D5D5D5;
+  margin: 4px -10px;
+}
+
+.bot .msg {
+  border: 1px solid #D5D5D5;
+  -webkit-border-radius: 20px;
+  -webkit-border-bottom-left-radius: 0;
+  -moz-border-radius: 20px;
+  -moz-border-radius-bottomleft: 0;
+  border-radius: 20px;
+  border-bottom-left-radius: 0;
+  background: #fff;
+  margin-left: 5px;
+  padding: 10px;
+  margin-bottom: 1px;
 }
 
 .facebook_title{
@@ -5394,4 +5424,29 @@ textarea.form-control:disabled {
 .el_first_show_location, .el_first_show_filter,
 .el_second_show_filter, .el_thirt_show_filter{
   display: none;
+}
+.fb_menu{
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+.fb_menu li {
+  border-bottom: 1px solid #D5D5D5;
+  padding: 6px 8px;
+  margin: 0px -10px;
+}
+.fb_menu li a {
+  color: #3B5998;
+  font-weight: bold;
+}
+.fb_image{
+  margin-left: -10px;
+  margin-top: -10px;
+  width: 190px;
+  -webkit-border-radius: 20px;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-bottom-right-radius: 0;
+  -moz-border-radius: 20px;
+  -moz-border-radius-bottomleft: 0;
+  -moz-border-radius-bottomright: 0;
 }
