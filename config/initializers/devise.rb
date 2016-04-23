@@ -26,6 +26,10 @@ Devise.setup do |config|
   # available as additional gems.
   require 'devise/orm/active_record'
 
+  config.omniauth :shopify, "ab7b673c7771f7259bc82b2666a9e6fb", "cae5b4336a1bc38b2b72515ffd1c6e3a"
+
+
+
   # ==> Configuration for any authentication mechanism
   # Configure which keys are used when authenticating a user. The default is
   # just :email. You can configure it to use [:username, :subdomain], so for

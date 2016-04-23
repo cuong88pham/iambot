@@ -156,7 +156,7 @@
 .nav-sm .menu_section {
   margin: 0;
 }
-.nav-sm span.fa, 
+.nav-sm span.fa,
 .nav-sm .menu_section h3 {
   display: none;
 }
@@ -545,11 +545,11 @@ a:hover, a:focus {
   color: #E7E7E7;
   font-weight: 500;
 }
-.nav.child_menu li li:hover, 
+.nav.child_menu li li:hover,
 .nav.child_menu li li.active {
   background: none;
 }
-.nav.child_menu li li a:hover, 
+.nav.child_menu li li a:hover,
 .nav.child_menu li li a.active {
   color: #fff;
 }
@@ -694,7 +694,7 @@ footer {
   }
 }
 .nav-sm footer {
-  margin-left: 70px ;  
+  margin-left: 70px ;
 }
 .tile-stats.sparkline {
   padding: 10px;
@@ -1365,7 +1365,7 @@ ul.msg_list li a .message {
   border: 1px solid #D9DEE4;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  
+
 }
 .dropdown-menu>li>a {
   color: #5A738E;
@@ -5344,4 +5344,24 @@ ul.notifications {
   right: 100%;
   width: 100%;
   height: 2px;
+}
+
+.conversation{
+  position: relative;
+}
+.facebook_chat_box{
+  position: absolute;
+  bottom: 0px;
+  border: 1px solid #B8B0BA;
+  right: 0px;
+  padding: 0px;
+  background: #EDEEF1;
+}
+
+.facebook_title{
+  font-size: 14px;
+  background: #40599B;
+  color: #fff;
+  padding:10px 15px;
+  margin: 0px;
 }

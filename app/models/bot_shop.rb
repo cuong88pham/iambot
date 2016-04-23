@@ -9,4 +9,10 @@ class BotShop < ActiveRecord::Base
 
   belongs_to :shopping_message, class_name: 'Message'
   belongs_to :welcome_message, class_name: 'Message'
+
+  def self.find_for_oauth(auth, signed_in_resource = nil)
+
+    binding.pry
+  end
+
 end

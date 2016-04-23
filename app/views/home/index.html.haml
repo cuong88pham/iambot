@@ -1,7 +1,37 @@
-%div
-  .page-title
-    .title_left
-      %h3
-        Inbox Design
-        %small
-          Some examples to get you started
+.row.conversation
+  .col-md-8.col-sm-8.col-xs-8
+    %h3= @page_title.to_s
+    .row
+      .col-md-12.col-sm-12.col-xs-12
+        .col-md-6.col-sm-6.col-xs-6
+          %p.alert.alert-info
+            %b When user start a conversation
+
+
+      .col-md-12.col-sm-12.col-xs-12
+        .col-md-6.col-sm-6.col-xs-6.pull-right
+
+          %p.text-right
+            %b Bot's reply
+          .tile-stats
+            %p Chào bạn, Mình là đầu bếp ảo KitFe. Mình xin phép được tư vấn cho bạn về menu và cách đặt hàng hôm nay. Chọn “Xem thực đơn” để được hỗ trợ bởi mình và “Tư vấn viên” trong trường hợp bạn cần gặp đội ngũ chăm sóc khách hàng.
+
+          .col-md-6.col-sm-6.col-xs-6.pull-right
+            %button.btn.btn-block.btn-primary Kitfe là gì
+            %button.btn.btn-block.btn-primary Xem thực đơn
+            %button.btn.btn-block.btn-primary Gặp tư vấn
+            %button.btn.btn-block.btn-default Add Button
+  .col-md-4.col-sm-4.col-xs-4.facebook_chat_box
+    .facebook_title
+      %p{style:'margin-bottom: 0px;'}
+        %b Kitfe - Kitchen For Everyone
+        %span.pull-right
+          %i.fa.fa-gear
+          %i.fa.fa-close
+      %span{style: 'font-size: 10px;'} Typically replies within an hour
+
+
+
+    %br/
+    %br/
+    %br/
