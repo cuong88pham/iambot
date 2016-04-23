@@ -7,7 +7,7 @@
             .x_title
               %h2
                 Bot setting
-                %small Sessions
+                %small
               %ul.nav.navbar-right.panel_toolbox
                 %li
                   %a.collapse-link
@@ -59,16 +59,16 @@
                           %center
                             %h2 Login with shopify
                             %div
-                              %input.form-control{:placeholder => "shop.myshotify.com", :required => "", :type => "text"}/
+                              %input.form-control{:placeholder => "shop.myshopify.com", :required => "", :type => "text", :value => "kitfe.myshopify.com"}/
+                            %br
+                            -# %div
+                            -#   %input.form-control{:placeholder => "Username", :required => "", :type => "text", :value => "phuochai@kitfe.com"}/
+                            -# %br
+                            -# %div
+                            -#   %input.form-control{:placeholder => "Password", :required => "", :type => "password", :value => "133434"}/
                             %br
                             %div
-                              %input.form-control{:placeholder => "Username", :required => "", :type => "text"}/
-                            %br
-                            %div
-                              %input.form-control{:placeholder => "Password", :required => "", :type => "password"}/
-                            %br
-                            %div
-                              = link_to 'Login with shopify', '/login?shop=kshop-11.myshopify.com', class: 'btn btn-success'
+                              = link_to 'Connect with shopify', '/login?shop=kshop-11.myshopify.com', class: 'btn btn-success'
 
                 #step-2
                   %h2.StepTitle Step 2 Content
