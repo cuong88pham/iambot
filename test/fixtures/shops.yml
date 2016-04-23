@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  shop_domain: MyString
+  shop_token: MyString
+  name: MyString
+  command: MyString
+  shopping_message_id: 1
+  wellcome_message_id: 1
+  status: 1
+  subscription_type: 1
+
+two:
+  shop_domain: MyString
+  shop_token: MyString
+  name: MyString
+  command: MyString
+  shopping_message_id: 1
+  wellcome_message_id: 1
+  status: 1
+  subscription_type: 1
