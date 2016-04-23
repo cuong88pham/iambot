@@ -15,10 +15,25 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require nprogress
+//= require gauge/gauge.min
 //= require progressbar/bootstrap-progressbar.min
+//= require moment/moment.min
+//= require datepicker/daterangepicker
+//= require chartjs/chart.min
+//= require custom
+//= flot/jquery.flot
+//= flot/jquery.flot.pie
+//= flot/jquery.flot.orderBars
+//= flot/jquery.flot.time.min
+//= flot/date
+//= flot/jquery.flot.spline
+//= flot/jquery.flot.stack
+//= flot/curvedLines
+//= flot/jquery.flot.resize
 //= require icheck/icheck.min
 //= require pace/pace.min
+//= require skycons/skycons.min
 //= require api
 //= require bot_setup
 //= require custom
-
+//= require wizard/jquery.smartWizard

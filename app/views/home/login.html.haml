@@ -1,0 +1,32 @@
+%div
+  %a#toregister.hiddenanchor
+  %a#tologin.hiddenanchor
+  #wrapper
+    #login.animate.form
+      %section.login_content
+        %form
+          %h1 Start selling today
+          %div          
+            IAMBOT.xyz is a messenger automation platform  to turn your business to DIAMOND
+          %div
+            = link_to 'Login with Facebook', '/wellcome', class: 'btn btn-primary'  
+
+
+          -#   %input.form-control{:placeholder => "Username", :required => "", :type => "text"}/
+          -# %div
+          -#   %input.form-control{:placeholder => "Password", :required => "", :type => "password"}/
+          -# %div
+          -#   = link_to 'Login with shopify', '/wellcome', class: 'btn btn-default'
+
+          -# %hr
+          %h1 Login with shopify
+          %div
+            %input.form-control{:placeholder => "shop.myshotify.com", :required => "", :type => "text"}/
+          -# %div
+          -#   %input.form-control{:placeholder => "Username", :required => "", :type => "text"}/
+          -# %div
+          -#   %input.form-control{:placeholder => "Password", :required => "", :type => "password"}/
+          %div
+            = link_to 'Login with shopify', '/wellcome', class: 'btn btn-success'
+        / form
+      / content
