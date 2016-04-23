@@ -31,6 +31,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'haml', '~> 4.0', '>= 4.0.7'
 gem 'html2haml'
+gem 'font-awesome-sass', '~> 4.5.0'
+
+gem 'bootstrap-sass', '~> 3.3.6'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
