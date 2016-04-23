@@ -11,8 +11,10 @@
  * file per style scope.
  *
  *= require bootstrap.min
+ *= require fonts/css/font-awesome
  *= require animate.min
  *= require custom.css
  *= require icheck/flat/green
+ #= floatexamples
  *= require_self
  */
