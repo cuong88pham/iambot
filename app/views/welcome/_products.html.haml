@@ -1,6 +1,7 @@
-.col-md-3.col-sm-6.col-xs-12  
-  .pricing  
-    .title
-      %h2 Ba chỉ rang cháy cạnh
-    .x_content
-      %div Thịt có mùi thơm, miếng thịt không khô ăn vừa có vị béo vừa có cảm giác rất ngon cơm.
+- @foods.each do |food|
+  .col-md-3.col-sm-6.col-xs-12
+    .pricing
+      .title
+        %h2= food.title
+      .x_content
+        %div Thịt có mùi thơm, miếng thịt không khô ăn vừa có vị béo vừa có cảm giác rất ngon cơm.

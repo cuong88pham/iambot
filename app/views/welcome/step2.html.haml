@@ -55,7 +55,7 @@
                   %form.form-horizontal.form-label-left
                     #wrapper
                       %section.login_content
-                        .form-group                      
+                        .form-group
                           %center
                             %h2 Login with shopify
                             %div
@@ -79,7 +79,7 @@
                         .x_content
                           .row
                             .col-md-12
-                              = render partial: "products"
+                              = render "products", foods: @foods
 
               / End SmartWizard Content
 
@@ -95,4 +95,4 @@
       transitionEffect: 'slide'
     });
 
-  });                
+  });
