@@ -13,7 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require bootstrap.min
+//= require bootstrap-sprockets
+//= require nprogress
 //= require progressbar/bootstrap-progressbar.min
 //= require icheck/icheck.min
 //= require pace/pace.min
