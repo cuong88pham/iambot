@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
-  devise_for :bot_shops
 
-  root 'home#index'
+  root :to => 'home#index'
+  mount ShopifyApp::Engine, at: '/'
+
+  get '/auth/shopify/callback', to: 'home#callback'
+  get '/dashboard', to: 'omniauth_callbacks#dashboard'
 
 end

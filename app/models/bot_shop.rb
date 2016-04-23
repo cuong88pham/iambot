@@ -12,7 +12,6 @@ class BotShop < ActiveRecord::Base
 
   def self.find_for_oauth(auth, signed_in_resource = nil)
 
-    binding.pry
   end
 
 end

@@ -1,5 +1,8 @@
-class HomeController < ApplicationController
+class HomeController < ShopifyApp::AuthenticatedController
+  layout 'application'
   def index
-    @page_title = "Conversation"
+    @products = ShopifyAPI::Product.find(:all, :params => {:limit => 10})
+    render 'index'
   end
+
 end
