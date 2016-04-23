@@ -1,0 +1,48 @@
+.step3-definition-content
+  .row
+    .step3-content
+      .col-md-11
+        .step3-customer
+          .col-md-6.pull-left
+            %p
+              %b Customer ask:                          
+            %input.form-control{:placeholder => "shop.myshopify.com", :required => "", :type => "text", :value => "bạn ơi có ship ở thanh xuân không ?"}/
+        .step3-a-message
+          %br
+          %br
+          %br
+          .col-md-6
+            %p
+              %b Bot's reply
+              %input.form-control{:placeholder => "shop.myshopify.com", :required => "", :type => "text", :value => "Có bạn nhé. Đây là menu của thanh xuân"} 
+      .col-md-1
+        .btn.btn-round.btn-danger.step3-definition-remove
+          %i.fa.fa-close
+
+  %hr/
+  .row
+    .step3-content
+      .col-md-11
+        .step3-customer
+          .col-md-6.pull-left
+            %p
+              %b Customer ask:                          
+            %input.form-control{:placeholder => "shop.myshopify.com", :required => "", :type => "text", :value => "bạn ơi bây giờ còn ship không"}/
+        .step3-a-message
+          %br
+          %br
+          %br
+          .col-md-6
+            %p
+              %b Bot's reply
+              %input.form-control{:placeholder => "shop.myshopify.com", :required => "", :type => "text", :value => "còn bạn nhé. Bạn ở xuận nào vậy"}/
+              .col-md-3
+                %button.btn.btn-block.btn-primary.btn-action Chọn quận                
+      .col-md-1
+        .btn.btn-round.btn-danger.step3-definition-remove
+          %i.fa.fa-close
+
+%hr/
+.row
+  .col-md-3.pull-left.step-add-definition
+    = link_to 'Add definition', '/ajax/add_definition.js', remote: true, class: 'button btn btn-block btn-default'

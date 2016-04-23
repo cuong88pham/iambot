@@ -1,0 +1,24 @@
+.col-md-12
+  .col-md-6
+    %p
+      %b Bot's reply
+    .tile-stats
+      %textarea.textarea#welcome_message.form-control{onkeyup: "textAreaAdjust(this)", disabled: true}
+        = template[:message]
+  - template[:buttons].each do |key, button|
+    .col-md-12
+      .col-md-3
+        %button.btn.btn-block.btn-primary.btn-action
+          = button[:title]
+    .col-md-12
+      .col-md-8.col-sm-8.col-xs-8
+        %p.pull-right
+          %strong= "When user select #{button[:title]}"
+
+    .col-md-12
+      - if button[:data].present? && button[:type] == 'show_message'
+        = render 'show_message', button: button
+
+      - if button[:data][:trigger].present?
+        - trigger = @template_food[button[:data][:trigger].to_sym]
+        = render 'show_trigger', trigger: trigger

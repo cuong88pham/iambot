@@ -1,0 +1,21 @@
+.col-md-12.col-sm-12.col-xs-12
+  .col-md-6.col-sm-6.col-xs-6.pull-right
+    .tile-stats
+      %textarea.textarea#welcome_message.form-control{onkeyup: "textAreaAdjust(this)", disabled: true}
+        = trigger[:message]
+- if trigger[:buttons].present?
+  - trigger[:buttons].each do |k, b|
+    .col-md-12.col-sm-12.col-xs-12
+      .col-md-8.col-sm-8.col-xs-8
+        %p
+          %strong= "When user select #{b[:title]}"
+        - if b[:data].present? && b[:type] == 'show_message'
+          = render 'show_message'
+        - sub_trigger_sym = b[:trigger] || b[:data][:trigger]
+
+        - if sub_trigger_sym.present? && b[:display] == true
+          - sub_trigger = @template_food[sub_trigger_sym.to_sym]
+          = render sub_trigger_sym.to_s, trigger: sub_trigger
+
+      .col-md-3.col-sm-3.col-xs-3.pull-right
+        %button.btn.btn-block.btn-primary.btn-action= b[:title]

@@ -44,5 +44,10 @@ $(document).ready(function(){
   $(".btn-notification-filter").click(function() {    
     console.log("click");
     $(".table-notification-users").show();
+  });  
+
+  $(".step3-definition-remove").click(function() {    
+    console.log("click");
+    $(this).parent().parent().parent().remove();
   });
 });
