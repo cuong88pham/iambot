@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   get '/products', to: 'home#products'
 
+  get '/users', to: 'users#index'
+
   get '/welcome', to: 'welcome#index'
   get '/welcome/step1', to: 'welcome#step1'
   get '/welcome/step2', to: 'welcome#step2'

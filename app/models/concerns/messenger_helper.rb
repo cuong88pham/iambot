@@ -50,7 +50,7 @@ module MessengerHelper
   def self.getJsonWithFood(food)
 
     buttons= [
-      { type: "web_url", url: "https://checkout.shopify.com/10004832/checkouts/5b02bae9fb27f67b9e48a049abc8d79b?channel=facebook", title: "Mua" },
+      { type: "web_url", url: "https://checkout.shopify.com/2489646/checkouts/6210886d8bff3493fc81b25e2ccc8ecd?_ga=1.23687290.1913939028.1461428419", title: "Mua" },
       { type: "postback", title: "Xem thêm", payload: MS_PAYLOAD[:menu__other] }      
     ]
 
