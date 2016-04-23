@@ -15,8 +15,9 @@ gem 'coffee-rails', '~> 4.1.0'
 # gem 'therubyracer', platforms: :ruby
 
 gem 'devise'
-
+gem 'omniauth'
 gem 'omniauth-shopify-oauth2'
+gem 'omniauth-facebook'
 
 gem 'pry-rails'
 
