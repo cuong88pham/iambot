@@ -1,3 +1,10 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@import "animate.min";
+@import "custom";
+@import "icheck/flat/green";
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -10,11 +17,6 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require bootstrap.min
- *= require fonts/css/font-awesome
- *= require animate.min
- *= require custom.css
- *= require icheck/flat/green
  #= floatexamples
  *= require_self
  */

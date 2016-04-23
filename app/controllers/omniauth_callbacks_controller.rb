@@ -1,6 +1,5 @@
 class OmniauthCallbacksController < ApplicationController
 
-
   def callback
 
   end
