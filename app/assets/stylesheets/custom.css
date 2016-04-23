@@ -5365,3 +5365,24 @@ ul.notifications {
   padding:10px 15px;
   margin: 0px;
 }
+textarea.form-control{
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border: 1px solid #fff;
+  overflow: auto;
+  outline: none;
+
+}
+textarea.form-control:focus {
+    outline: none !important;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    border: none !important;
+}
+textarea.form-control:disabled {
+    background: #fff;
+    cursor: pointer;
+}
+

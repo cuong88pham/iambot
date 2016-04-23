@@ -14,9 +14,26 @@ var URL = window.location,
     $NAV_MENU = $('.nav_menu'),
     $FOOTER = $('footer');
 
+function textAreaAdjust(o) {
+    o.style.height = "1px";
+    o.style.height = (25+o.scrollHeight)+"px";
+}
+$(document).ready(function(){
+    BOTAPI.create_message();
+    $(".tile-stats").click(function(){
+        $("#welcome_message").prop("disabled", false);
+    });
+
+    $("#welcome_message").on('blur', function(){
+        $("#welcome_message").prop("disabled", true);
+    })
+})
 // Sidebar
 $(function () {
 
+
+    $("#welcome_message").css('height', document.getElementById("welcome_message").scrollHeight + 25 + 'px');
+    console.log(document.getElementById("welcome_message").scrollHeight);
     // TODO: This is some kind of easy fix, maybe we can improve this
     var setContentHeight = function () {
         // reset height
@@ -46,7 +63,7 @@ $(function () {
                 $SIDEBAR_MENU.find('li').removeClass('active');
                 $SIDEBAR_MENU.find('li ul').slideUp();
             }
-            
+
             $li.addClass('active');
 
             $('ul:first', $li).slideDown(function() {
@@ -85,7 +102,7 @@ $(function () {
     }).parent().addClass('active');
 
     // recompute content when resizing
-    $(window).smartresize(function(){  
+    $(window).smartresize(function(){
         setContentHeight();
     });
 
@@ -97,15 +114,15 @@ $(function () {
         var $BOX_PANEL = $(this).closest('.x_panel'),
             $ICON = $(this).find('i'),
             $BOX_CONTENT = $BOX_PANEL.find('.x_content');
-        
+
         // fix for some div with hardcoded fix class
         if ($BOX_PANEL.attr('style')) {
             $BOX_CONTENT.slideToggle(200, function(){
                 $BOX_PANEL.removeAttr('style');
             });
         } else {
-            $BOX_CONTENT.slideToggle(200); 
-            $BOX_PANEL.css('height', 'auto');  
+            $BOX_CONTENT.slideToggle(200);
+            $BOX_PANEL.css('height', 'auto');
         }
 
         $ICON.toggleClass('fa-chevron-up fa-chevron-down');
@@ -345,9 +362,9 @@ if (typeof NProgress != 'undefined') {
 
 /**
  * Resize function without multiple trigger
- * 
+ *
  * Usage:
- * $(window).smartresize(function(){  
+ * $(window).smartresize(function(){
  *     // code here
  * });
  */
@@ -362,7 +379,7 @@ if (typeof NProgress != 'undefined') {
             function delayed () {
                 if (!execAsap)
                     func.apply(obj, args);
-                timeout = null; 
+                timeout = null;
             }
 
             if (timeout)
@@ -370,11 +387,11 @@ if (typeof NProgress != 'undefined') {
             else if (execAsap)
                 func.apply(obj, args);
 
-            timeout = setTimeout(delayed, threshold || 100); 
+            timeout = setTimeout(delayed, threshold || 100);
         };
     };
 
-    // smartresize 
+    // smartresize
     jQuery.fn[sr] = function(fn){  return fn ? this.bind('resize', debounce(fn)) : this.trigger(sr); };
 
 })(jQuery,'smartresize');
