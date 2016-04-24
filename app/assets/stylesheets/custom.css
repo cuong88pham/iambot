@@ -5356,14 +5356,15 @@ ul.notifications {
   right: 10px;
   padding: 0px;
   background: #EDEEF1;
-  width: 260px;
-
-
+  width: 460px;
+}
+.invi {
+  display: none;
 }
 
 .facebook_chat_box .box {
   padding: 5px 0px;
-  min-height: 300px;
+  min-height: 500px;
   font-size: 12px;
 }
 .facebook_chat_box .box .bot {
@@ -5442,7 +5443,7 @@ textarea.form-control:disabled {
 .fb_image{
   margin-left: -10px;
   margin-top: -10px;
-  width: 190px;
+  width: 340px;
   -webkit-border-radius: 20px;
   -webkit-border-bottom-left-radius: 0;
   -webkit-border-bottom-right-radius: 0;
