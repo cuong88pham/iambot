@@ -115,7 +115,7 @@ class WelcomeController < ShopifyApp::AuthenticatedController
           message: 'Khi nào muốn đặt món, hãy đánh "kitfe" để xem thực đơn bạn nhé!'
         },
         wellcome_area: {
-          message: 'Chào bạn, Mình là đầu bếp ảo KitFe. Mình xin phép được tư vấn cho bạn về menu và cách đặt hàng hôm nay. Chọn “Xem thực đơn” để được hỗ trợ bởi mình và “Tư vấn viên” trong trường hợp bạn cần gặp đội ngũ chăm sóc khách hàng.',
+          message: 'Chào bạn, Mình là trợ lý đầu bếp của KitFe. Mình xin phép được tư vấn cho bạn về menu và cách đặt hàng hôm nay. Chọn “Xem thực đơn” để được hỗ trợ bởi mình và “Tư vấn viên” trong trường hợp bạn cần gặp đội ngũ chăm sóc khách hàng.',
           buttons: {
             first: {
               title: 'KitFe là gì',
