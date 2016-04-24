@@ -1,1 +1,23 @@
-Sh
+- if products.present?
+  - products.each do |product|
+    .col-md-4
+      .thumbnail
+        .image.view.view-first
+          %img{:alt => "image", :src => "#{product[:image]}", :style => "width: 100%; display: block;"}
+            .mask
+              %p= product[:name]
+              .tools.tools-bottom
+                %a{:href => "#"}
+                  %i.fa.fa-link
+                %a{:href => "#"}
+                  %i.fa.fa-pencil
+                %a{:href => "#"}
+                  %i.fa.fa-times
+        .caption
+          %p.text-center
+            %a{href: "#{product[:checkout_link]}"} MUA
+          %p.text-center Trên 55k
+          %p.text-center Đổi danh mục
+
+- else
+  %p.text-center Hết rồi

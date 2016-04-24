@@ -43,10 +43,10 @@ $(document).ready(function(){
         var klass = $(this).data('key');
         $('.'+klass).slideToggle();
         $.each($('.textarea'), function(i){
-        document.getElementsByClassName("textarea")[i].style.height = document.getElementsByClassName("textarea")[i].scrollHeight + 5 + 'px';
+          document.getElementsByClassName("textarea")[i].style.height = document.getElementsByClassName("textarea")[i].scrollHeight + 5 + 'px';
+        });
     });
-    });
-})
+});
 
 // Sidebar
 $(function () {

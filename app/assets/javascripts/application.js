@@ -50,4 +50,22 @@ $(document).ready(function(){
     console.log("click");
     $(this).parent().parent().parent().remove();
   });
+
+  $(".step3-button-remove").click(function() {    
+    $(this).parent().parent().remove();
+  });  
+
+  //
+
+  $(".step3-message-contain").delegate(".step3-button-remove", "click", function(event) {
+    $(this).parent().parent().remove();
+  });
+
+  $(".step3-message-contain").delegate(".step3-add-button", "blur", function(event) {
+    var parent = $(this).parent();
+    var input = $(this).find('input');
+    console.log(input.val());
+    parent.append('<div class="col-md-12"><div class="col-md-3"><button class="btn btn-block btn-primary btn-action" data-key="el_first">'+input.val()+'</button></div><div class="col-md-1"><div class="btn btn-round btn-danger step3-button-remove"><i class="fa fa-close"></i></div></div></div></div>');
+    $(this).remove();
+  });
 });
