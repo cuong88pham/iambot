@@ -20,16 +20,21 @@ function textAreaAdjust(o) {
 }
 $(document).ready(function(){
     BOTAPI.create_message();
-    $(".tile-stats").click(function(){
-        $("#welcome_message").prop("disabled", false);
-        $("#welcome_message").focus();
-    });
+    // $(".tile-stats").click(function(){
+    //     $("#welcome_message").prop("disabled", false);
+    //     $("#welcome_message").focus();
+    // });
 
-    $("#welcome_message").on('blur', function(){
-        $("#welcome_message").prop("disabled", true);
-    });
+    // $("#welcome_message").on('blur', function(){
+    //     $("#welcome_message").prop("disabled", true);
+    // });
+
     $.each($('.textarea'), function(i){
         document.getElementsByClassName("textarea")[i].style.height = document.getElementsByClassName("textarea")[i].scrollHeight + 5 + 'px';
+    });
+
+    $('.textarea').bind('input propertychange', function() {
+      console.log(this.value);
     });
 })
 
