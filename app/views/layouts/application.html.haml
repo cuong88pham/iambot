@@ -5,7 +5,8 @@
     %title IMBOT.ME
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
-    %link{:href=>"/icon.png", :rel=">icon" :type=>"image/png" }
+    = favicon_link_tag('icon')
+    
     = csrf_meta_tags
   %body
   %body.nav-md
