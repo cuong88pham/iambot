@@ -19,6 +19,7 @@ function textAreaAdjust(o) {
     o.style.height = (5+o.scrollHeight)+"px";
 }
 $(document).ready(function(){
+
     BOTAPI.create_message();
     // $(".tile-stats").click(function(){
     //     $("#welcome_message").prop("disabled", false);
@@ -29,12 +30,21 @@ $(document).ready(function(){
     //     $("#welcome_message").prop("disabled", true);
     // });
 
+    $(".tile-stats").click(function(){
+        $("#welcome_message").prop("disabled", false);
+        $("#welcome_message").focus();
+    });
+
     $.each($('.textarea'), function(i){
         document.getElementsByClassName("textarea")[i].style.height = document.getElementsByClassName("textarea")[i].scrollHeight + 5 + 'px';
     });
 
-    $('.textarea').bind('input propertychange', function() {
-      console.log(this.value);
+    $('.btn-action').click(function(){
+        var klass = $(this).data('key');
+        $('.'+klass).slideToggle();
+        $.each($('.textarea'), function(i){
+        document.getElementsByClassName("textarea")[i].style.height = document.getElementsByClassName("textarea")[i].scrollHeight + 5 + 'px';
+    });
     });
 })
 

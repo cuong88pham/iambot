@@ -1,8 +1,19 @@
 .col-md-12.col-sm-12.col-xs-12
-  %p.text-right
-    %b Bot's reply
-  .tile-stats
-    %textarea.textarea#welcome_message.form-control{onkeyup: "textAreaAdjust(this)", disabled: true}
-      = trigger[:data][:message]
-= trigger
-= render 'show_trigger', trigger: trigger[:data]
+  .col-md-6.col-sm-6.col-xs-6.pull-left
+    %p.text-right
+      %b Bot's reply
+    .tile-stats
+      %textarea.textarea#welcome_message.form-control{onkeyup: "textAreaAdjust(this)", disabled: true}
+        = trigger[:data][:message]
+  - trigger[:data][:buttons].each do |key, button|
+    .col-md-12.col-sm-12.col-xs-12
+      .col-md-3.col-sm-3.col-xs-3.pull-left
+        %button.btn.btn-block.btn-primary.btn-action{data:{slug: button[:slug], key: "el_#{key}"}}
+          = button[:title]
+
+    .col-md-12{class: "el_#{key}"}
+      %p.padding-left-10
+        %strong= "When user select #{button[:title]}"
+      - products = @template_food[:show_product][:data][button[:slug].to_sym][:products] if @template_food[:show_product][:data][button[:slug].to_sym].present?
+    .col-md-12{class: "el_#{key}"}
+      = render button[:trigger].to_s, products: products || []
