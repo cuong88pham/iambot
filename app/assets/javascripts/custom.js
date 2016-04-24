@@ -20,6 +20,16 @@ function textAreaAdjust(o) {
 }
 $(document).ready(function(){
 
+    BOTAPI.create_message();
+    // $(".tile-stats").click(function(){
+    //     $("#welcome_message").prop("disabled", false);
+    //     $("#welcome_message").focus();
+    // });
+
+    // $("#welcome_message").on('blur', function(){
+    //     $("#welcome_message").prop("disabled", true);
+    // });
+
     $(".tile-stats").click(function(){
         $("#welcome_message").prop("disabled", false);
         $("#welcome_message").focus();
@@ -28,6 +38,7 @@ $(document).ready(function(){
     $.each($('.textarea'), function(i){
         document.getElementsByClassName("textarea")[i].style.height = document.getElementsByClassName("textarea")[i].scrollHeight + 5 + 'px';
     });
+
     $('.btn-action').click(function(){
         var klass = $(this).data('key');
         $('.'+klass).slideToggle();
@@ -38,7 +49,6 @@ $(document).ready(function(){
         $('.box').animate({scrollTop: box_bottom + 'px'}, '500');
     });
     });
-
 })
 
 // Sidebar
