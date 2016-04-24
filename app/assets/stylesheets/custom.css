@@ -5389,6 +5389,11 @@ hr {
   margin-bottom: 1px;
 }
 
+.bot .msg2{
+  -webkit-border-top-left-radius: 0;
+  -webkit-border-top-right-radius: 0;
+}
+
 .facebook_title{
   font-size: 14px;
   background: #40599B;

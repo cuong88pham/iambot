@@ -2,7 +2,7 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title FbbotRor
+    %title IMBOT.ME
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
     = csrf_meta_tags
@@ -11,6 +11,6 @@
     .container.body
       .main_container
         = render partial: "layouts/sidebar"
-        = render partial: "layouts/header"            
+        = render partial: "layouts/header"
         .right_col{:role => "main"}
           = yield
