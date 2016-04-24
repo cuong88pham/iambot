@@ -20,13 +20,13 @@ class WelcomeController < ShopifyApp::AuthenticatedController
         view_menus: {
           message: 'Bạn có muốn xem thực đơn hôm nay không?',
           buttons:{
-            first: {
+            first_view_menu: {
               title: 'Có',
               type: 'show_location',
               trigger: 'show_location',
               display: true
             },
-            second: {
+            second_view_menu: {
               title: 'Không',
               type: 'show_message',
               trigger: 'meet_human',
@@ -34,79 +34,71 @@ class WelcomeController < ShopifyApp::AuthenticatedController
             }
           }
         },
+        show_product: {
+          data: {
+            'com_voi_bo': {
+                products:[
+                  {
+                    id: 1,
+                    name: 'Product 1',
+                    image: 'http://image.kitfe.com/production/foods/2016/03/72_large_1459347125.jpg?1459347125',
+                    checkout_link: 'http://api.kitfe.com/foods?region_id=2',
+                    price: '10000'
+                  },
+                  {
+                    id: 2,
+                    name: 'Product 2',
+                    image: 'http://image.kitfe.com/production/foods/2016/03/72_large_1459347125.jpg?1459347125',
+                    checkout_link: 'http://api.kitfe.com/foods?region_id=2',
+                    price: '10000'
+                  },
+                  {
+                    id: 3,
+                    name: 'Product 3',
+                    image: 'http://image.kitfe.com/production/foods/2016/03/72_large_1459347125.jpg?1459347125',
+                    checkout_link: 'http://api.kitfe.com/foods?region_id=2',
+                    price: '10000'
+                  }
+                ]
+              },
+          }
+        },
         show_filter: {
           data: {
             message: 'Bạn muốn ăn cơm với gì',
             buttons:{
-              a: {
+              first_show_filter: {
                 title: 'Cơm với bò',
+                slug: 'com_voi_bo',
                 type: 'show_product',
                 trigger: 'show_product',
                 display: true
               },
-              b: {
+              second_show_filter: {
                 title: 'Cơm với gà',
+                slug: 'com_voi_ga',
                 type: 'show_product',
                 trigger: 'show_product',
                 display: true
               },
-              c: {
+              thirt_show_filter: {
               title: 'Khác',
+              slug: 'khac',
               type: 'show_filter',
-              trigger: 'show_filter',
-              display: true
-            },
-            d: {
-              title: 'Cơm với thịt heo',
-              type: 'show_product',
-              trigger: 'show_product',
-              display: true
-            },
-            e: {
-              title: 'Cơm với cá',
-              type: 'show_product',
               trigger: 'show_product',
               display: true
             }
           }
         }
         },
-
         show_location: {
           message: 'Bạn đang ở quận nào',
           buttons:{
-            a: {
+            first_show_location: {
               title: 'Hai Bà Trưng',
               type: 'show_filter',
               trigger: 'show_filter',
               display: true
-            },
-            b: {
-              title: 'Hoàn Kiếm',
-              type: 'show_filter',
-              trigger: 'show_filter',
-              display: false
-            },
-            c: {
-              title: 'Đống Đa',
-              type: 'show_filter',
-              trigger: 'show_filter',
-              display: false
-            },d: {
-              title: 'Cầu Giấy',
-              type: 'show_filter',
-              trigger: 'show_filter',
-              display: false
-            },e: {
-              title: 'Ba Đình',
-              type: 'show_filter',
-              trigger: 'show_filter',
-              display: false
-            },f: {
-              title: 'Trung Hòa, Yên Hòa',
-              type: 'show_filter',
-              trigger: 'show_filter',
-              display: false
             }
           }
         },
@@ -137,15 +129,14 @@ class WelcomeController < ShopifyApp::AuthenticatedController
             second: {
               title: 'Xem thực đơn',
               type: 'show_product',
-              data: {},
-              trigger: 'view_menus',
+              data: {
+                trigger: 'show_location'
+              },
               display: true
             },
             thirt: {
               title: 'Gặp tư vấn',
-              type: 'show_message',
-              data: {},
-              trigger: 'meet_human',
+              data: {trigger: 'meet_human'},
               display: true
             }
           }

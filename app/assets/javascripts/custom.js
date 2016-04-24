@@ -43,13 +43,13 @@ $(document).ready(function(){
         var klass = $(this).data('key');
         $('.'+klass).slideToggle();
         $.each($('.textarea'), function(i){
-        document.getElementsByClassName("textarea")[i].style.height = document.getElementsByClassName("textarea")[i].scrollHeight + 5 + 'px';
-        var box_bottom = document.getElementsByClassName("box")[0].scrollHeight;
+          document.getElementsByClassName("textarea")[i].style.height = document.getElementsByClassName("textarea")[i].scrollHeight + 5 + 'px';
+          var box_bottom = document.getElementsByClassName("box")[0].scrollHeight;
 
-        $('.box').animate({scrollTop: box_bottom + 'px'}, '500');
+          $('.box').animate({scrollTop: box_bottom + 'px'}, '500');
+      });
     });
-    });
-})
+});
 
 // Sidebar
 $(function () {

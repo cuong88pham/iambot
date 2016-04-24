@@ -7,4 +7,10 @@ class AjaxController < ActionController::Base
       format.js
     end
   end
+
+  def add_button
+    respond_to do |format|
+      format.js
+    end
+  end
 end

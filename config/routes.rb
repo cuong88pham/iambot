@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   get '/welcome/step3', to: 'welcome#step3'
 
   get '/ajax/add_definition', to: 'ajax#add_definition'
+  get '/ajax/add_button', to: 'ajax#add_button'
 
   # Facebook messenger callback
   get '/webhook', to: 'messenger#verify'
